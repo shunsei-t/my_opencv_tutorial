@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="usb_cam_node" pkg="usb_cam" type="usb_cam_node"  output="log" respawn="false" respawn_delay="0">
+        <remap from="/usb_cam/image_raw" to="/camera/image_raw"/>
+
+        <param name="video_device" value="/dev/video0"/>
+    </node>
+
+</launch>
